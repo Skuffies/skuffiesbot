@@ -9,8 +9,6 @@ const tmi = require('tmi.js');
 const quotes = JSON.parse(fs.readFileSync('quotes.json'));
 let quotesList = Object.keys(quotes)
 
-const channel = 'cpteagle';
-
 const options = {
     options: { debug: true },
     connections: {
@@ -21,7 +19,7 @@ const options = {
         username: BOT_USER,
         password: BOT_PASSWORD
     },
-    channels: [channel]
+    channels: [CHANNEL]
 };
 
 const client = new tmi.Client(options);
