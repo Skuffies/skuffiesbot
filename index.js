@@ -1,5 +1,5 @@
 require('dotenv/config');
-const { TWITCH_USER, TWITCH_PASSWORD } = process.env;
+const { BOT_USER, BOT_PASSWORD, CHANNEL } = process.env;
 
 const fs = require('fs');
 const { request, gql } = require('graphql-request');
@@ -18,8 +18,8 @@ const options = {
         secure: true
     },
     identity: {
-        username: TWITCH_USER,
-        password: TWITCH_PASSWORD
+        username: BOT_USER,
+        password: BOT_PASSWORD
     },
     channels: [channel]
 };
